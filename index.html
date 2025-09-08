@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Everbound</title>
     <link href="/css/style.css" rel="stylesheet">
-
+    <!-- in <head> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="/JavaScript/carousel.js" defer></script>
 </head>
 <body>
     
@@ -13,7 +16,7 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="index.html" class="logo-link">
-                <img src="/assets/Everbound Logo.png" alt="Home"></a>
+                <img src="/assets/EverboundLogo.png" alt="Company Logo that links to the homepage"></a>
                 <!-- <a href="index.html" class="logo-link">
                 <img src="/assets/Threded Tales Logo.png" alt="Home"></a> -->
             </div>
@@ -28,24 +31,85 @@
         </nav>
     </header>
 
-    <main>
-        <h3>Image slide will be placed here</h3>
-    </main>
+<main>
+    <section class="hero">
+        <div class="hero__copy">
+            <h1>Everbound</h1>
+            <p class="kicker">By Hand, In Time</p>
+            <p class="lede">Handcrafted bookbinding, careful repairs, and bespoke rebinding—made to last for generations.</p>
+        <div class="cta">
+            <a class="btn btn--primary" href="/services.html">View Services</a>
+            <a class="btn" href="/contact.html">Request a Quote</a>
+        </div>
+    </div>
+  <div class="hero__media" aria-hidden="true"></div>
+</section>
+</main>
 
-    <section class="titlecard">
-        <h1>Everbound</h1>
-        <h2>Handcrafted<br>Bookbinding & Rebinds</h2>
-        <h3>By Hand, In Time</h3>
-        <p>Preserving memories, one binding at a time</p>
-        <p>Where every story finds a home</p>
+<section class="services">
+  <h2>What we do</h2>
+  <div class="cards">
+    <article class="card">
+      <h3>Custom Bindings</h3>
+      <p>Cloth, paper, or mixed media. Thread-sewn signatures and archival glues.</p>
+    </article>
+    <article class="card">
+      <h3>Rebinds</h3>
+      <p>Turn any Softcover into a Hardcover, or refresh an old favorite.</p>
+    </article>
+    <article class="card">
+      <h3>Slipcasing</h3>
+      <p>Custom Slipcases for extra protection.</p>
+    </article>
+  </div>
+</section>
 
-    </section>
 
-    <section class="gallery">
+<section class="gallery">
+  <h2>Recent Work</h2>
 
-    </section>
+  <div class="carousel" aria-label="Bookbinding gallery">
+    <button class="carousel-btn prev" aria-label="Previous slide">‹</button>
+
+    <ul class="carousel-track">
+      <!-- Replace src="" with your images later -->
+      <li class="slide current">
+        <img src="" alt="Example binding 1 (placeholder)">
+      </li>
+      <li class="slide">
+        <img src="" alt="Example binding 2 (placeholder)">
+      </li>
+      <li class="slide">
+        <img src="" alt="Example binding 3 (placeholder)">
+      </li>
+      <li class="slide">
+        <img src="" alt="Example binding 4 (placeholder)">
+      </li>
+      <li class="slide">
+        <img src="" alt="Example binding 5 (placeholder)">
+      </li>
+    </ul>
+
+    <button class="carousel-btn next" aria-label="Next slide">›</button>
+
+    <div class="carousel-dots" role="tablist" aria-label="Slide navigation"></div>
+  </div>
+</section>
 
 
+<footer class="site-footer">
+  <div class="foot-wrap">
+    <div>
+      <strong>Everbound</strong><br>
+      Hand-bound in Sweden
+    </div>
+    <nav class="foot-nav">
+      <a href="/about.html">About</a>
+      <a href="/services.html">Services</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</footer>
 
 </body>
 </html>
