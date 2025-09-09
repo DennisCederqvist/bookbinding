@@ -228,16 +228,26 @@ body {
 
 .carousel {
   position: relative;
-  border-radius: 12px;
+  /* border-radius: 12px; */
+  overflow: visible;
+  /*background: #fffdfa;*/ /* matches var(--surface) vibe */
+  /* box-shadow: 0 8px 24px rgba(0,0,0,.08); */
+  padding-bottom: 32px;
+}
+
+.carousel-viewport {
   overflow: hidden;
+  border-radius: 12px;
   background: #fffdfa; /* matches var(--surface) vibe */
-  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  box-shadow: var(--shadow);
 }
 
 /* Keep a nice aspect ratio even before images load */
 .carousel-track {
   display: flex;
-  margin: 0; padding: 0; list-style: none;
+  margin: 0; 
+  padding: 0; 
+  list-style: none;
   transform: translateX(0);
   transition: transform .4s ease;
 }
@@ -260,14 +270,21 @@ body {
 
 /* Prev/Next buttons */
 .carousel-btn {
-  position: absolute; top: 50%; transform: translateY(-50%);
-  width: 40px; height: 40px; border-radius: 999px;
-  display: grid; place-items: center;
-  border: none; cursor: pointer;
-  background: rgba(0,0,0,.5); color: #fff;
-  transition: transform .15s ease, opacity .2s ease, box-shadow .2s ease;
-  opacity: .9;
-  z-index: 1;
+  position: absolute; 
+  top: 50%; 
+  transform: translateY(-50%);
+  width: 40px; 
+  height: 40px; 
+  border-radius: 999px;
+  display: grid; 
+  place-items: center;
+  border: none; 
+  cursor: pointer;
+  background: rgba(0,0,0,.5); 
+  color: #fff;
+  /* transition: transform .15s ease, opacity .2s ease, box-shadow .2s ease;
+  opacity: .9; */
+  z-index: 3;
 }
 
 .carousel-btn:hover { 
@@ -279,23 +296,37 @@ body {
 }
 
 .carousel-btn.prev { 
-    left: 10px; 
+    left: -50px; 
 }
 
 .carousel-btn.next { 
-    right: 10px; 
+    right: -50px; 
 }
 
 /* Dots */
 .carousel-dots {
-  position: absolute; left: 0; right: 0; bottom: 10px;
-  display: flex; justify-content: center; gap: 8px;
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  bottom: 0px;
+  display: flex; 
+  justify-content: center; 
+  gap: 8px;
+  z-index: 3;
 }
+
 .carousel-dots button {
-  width: 10px; height: 10px; border-radius: 999px; border: none;
-  background: rgba(0,0,0,.25); cursor: pointer;
+  width: 10px; 
+  height: 10px; 
+  border-radius: 999px; 
+  border: none;
+  background: rgba(0,0,0,.25); 
+  cursor: pointer;
 }
-.carousel-dots button[aria-selected="true"] { background: rgba(0,0,0,.6); }
+
+.carousel-dots button[aria-selected="true"] { 
+  background: rgba(0,0,0,.6); 
+}
 
 /* Mobile tweaks */
 @media (max-width: 600px){
