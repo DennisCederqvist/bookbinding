@@ -197,7 +197,7 @@ body {
     max-width:1100px; 
     margin: 0 auto; 
     padding: 18px 28px;
-    display:flex; 
+    display: flex; 
     align-items:center; 
     justify-content:space-between; 
     gap: 16px;
@@ -208,13 +208,13 @@ body {
     gap: 16px; 
 }
 
-.foot-nav a { 
+.foot-nav a, .foot-partners a { 
     color: var(--ink); 
     text-decoration: none; 
     opacity:.9; 
 }
 
-.foot-nav a:hover { 
+.foot-nav a:hover, .foot-partners a:hover { 
     opacity:1; 
     text-decoration: underline; 
 }
